@@ -1,7 +1,7 @@
-import datetime, time
+import datetime, time, os
 from api.browserstack import API, Browser, Worker
 
-bs_api = API(username = "vibhajrajan1", access_key = "isx1GLKoDPyxvJwMZBso")
+bs_api = API(username = os.environ['BROWSERSTACK_USER'], access_key = os.environ['BROWSERSTACK_ACCESS_KEY'])
 
 print bs_api.status()
 
